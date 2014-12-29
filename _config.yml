@@ -1,0 +1,14 @@
+# Site settings
+title: Philosofly | Official Website
+email: philosoflyhiphop@gmail.com
+description: "Philosofly | Official source for Music, Videos, Photos, News, Tour Dates and more!"
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://philosofly.net" # the base hostname & protocol for your site
+twitter_username: PhilosoflyMusic
+facebook_url: "https://www.facebook.com/pages/Philosofly/143716039043766"
+youtube_url: "https://www.youtube.com/user/thespursareadynasty"
+instagram_url: "http://instagram.com/philosofly_holmes"
+github_username: philosofly
+
+# Build settings
+markdown: kramdown

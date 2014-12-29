@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Philosofly | Official Website</title>
+		<description>Philosofly | Official source for Music, Videos, Photos, News, Tour Dates and more!</description>		
+		<link>http://philosofly.net</link>
+		<atom:link href="http://philosofly.net/feed.xml" rel="self" type="application/rss+xml" />
+		
+	</channel>
+</rss>

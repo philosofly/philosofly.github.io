@@ -1,0 +1,139 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+// Fonts
+$font: Arial, Helvetica, sans-serif;
+$font-logo: PebblesLogo;
+$font-title: TitleFont;
+
+// Colors
+$black: rgb(7, 0, 1);
+$transparent-black: rgba(7, 0, 1, 0.9);
+$white: rgb(255, 255, 255);
+$dark-grey: rgb(40, 40, 40);
+$dark-grey-hover: rgb(50, 50, 50);
+$medium-grey: rgb(66, 66, 66);
+$medium-grey-hover: rgb(80, 80, 80);
+$light-grey: rgb(188, 188, 188);
+
+$light-orange: rgb(255, 153, 0);
+$medium-orange: rgb(240, 138, 0);
+$light-blue: rgb(50, 153, 187);
+$medium-blue: rgb(30, 143, 177);
+
+$cream: #E9E0D1;
+$dark-cream: #D1C9BB;
+$brown: #68462B;
+$dark-brown: #68462B;
+$gold: #D9A430;
+
+// Our variables
+$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #111;
+$background-color: #fdfdfd;
+$brand-color:      #2a7ae2;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+// Using media queries with like this:
+// @include media-query($palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+body {
+    background-image: url(/img/background.jpg);
+    background-position: fixed;
+}
+
+/*===================================================*/
+/* Header styles */
+/*===================================================*/
+nav.navbar-fixed-top {
+	background-color: $transparent-black;
+    border-bottom: 1px solid $gold;
+    height: auto;
+    height: 50px;
+}
+
+.header-logo {
+    display: block;
+    position: absolute;
+    /*left: -100px;*/
+    width: 110px;
+
+    img {
+        background-color: $cream;
+        display: block;
+        margin: 0 auto;
+
+        /* Keep aspect ratio without overlapping parent */
+        max-width: 95%;
+        width: auto\9;
+        height: auto;
+        vertical-align: middle;
+        border: 0;
+        -ms-interpolation-mode: bicubic;
+        padding: 6px;
+    }
+
+    .logo-bottom {
+        width: 0;
+        height: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-top: 25px solid $cream;
+        margin: 0 auto;
+    }
+}
+
+.header {
+    a {
+        float: right;
+        font-size: 24px;
+        color: $cream;
+        padding-left: 5px;
+        margin-top: 12px;
+
+        -moz-transition:color .1s ease-in;
+        -o-transition:color .1s ease-in;
+        -webkit-transition:color .1s ease-in;
+    }
+
+    .last-social-btn {
+        padding-left: 30px;
+    }
+
+    a:not(.social) {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 20px;
+        margin-top: 14px;
+        padding-left: 20px;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: $gold;
+    }
+}
