@@ -48,6 +48,10 @@ $grey-color-dark:  darken($grey-color, 25%);
 $on-palm:          600px;
 $on-laptop:        800px;
 
+$max-xs-width: 767px;
+$max-sm-width: 991px;
+$max-md-width: 1199px;
+
 // Using media queries with like this:
 // @include media-query($palm) {
 //     .wrapper {
@@ -107,6 +111,21 @@ nav.navbar-fixed-top {
     }
 }
 
+.header-logo-name {
+    display: none;
+
+    img {
+        display: block;
+        width: 100px;
+        height: 48px;
+        vertical-align: middle;
+        padding: 8px 0;
+    }
+    img:hover {
+        padding: 6px 0;
+    }
+}
+
 .header {
     a {
         float: right;
@@ -135,5 +154,68 @@ nav.navbar-fixed-top {
     a:hover {
         text-decoration: none;
         color: $gold;
+    }
+}
+
+.mobile-nav {
+    color: $cream;
+    float: right;
+    font-size: 21px;
+    padding: 10px 0;
+
+    -moz-transition:color .1s ease-in;
+    -o-transition:color .1s ease-in;
+    -webkit-transition:color .1s ease-in;
+}
+.mobile-nav.active {
+    color: $gold;
+}
+.mobile-nav:hover {
+    color: $gold;
+    cursor: pointer;
+}
+
+/* Small devices */
+@media only screen and (max-width: $max-sm-width) {
+    .header {
+        a {
+            font-size: 20px;
+            padding-left: 3px;
+        }
+
+        .last-social-btn {
+            padding-left: 20px;
+        }
+
+        a:not(.social) {
+            margin-top: 16px;
+            font-size: 16px;
+            padding-left: 15px;
+        }
+    }
+}
+
+/* Extra small devices */
+@media only screen and (max-width: $max-xs-width) {
+    .header-logo {
+        display: none;
+    }
+
+    .header-logo-name {
+        display: inline-block;
+    }
+
+    .header {
+        a {
+            float: left;
+            padding-left: 0;
+            padding-right: 3px;
+        }
+        a:first-of-type {
+            padding-left: 35px;
+        }
+        .last-social-btn {
+            padding-left: 0;
+        }
     }
 }
