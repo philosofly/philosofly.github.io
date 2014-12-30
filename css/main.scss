@@ -93,6 +93,10 @@ nav.navbar-fixed-top {
         border: 0;
         -ms-interpolation-mode: bicubic;
         padding: 6px;
+
+        -moz-transition:padding-top .2s ease-in;
+        -o-transition:padding-top .2s ease-in;
+        -webkit-transition:padding-top .2s ease-in;
     }
     img:hover {
         padding-top: 10px;
@@ -117,6 +121,10 @@ nav.navbar-fixed-top {
         height: 48px;
         vertical-align: middle;
         padding: 8px 0;
+
+        -moz-transition:padding .2s ease-in;
+        -o-transition:padding .2s ease-in;
+        -webkit-transition:padding .2s ease-in;
     }
     img:hover {
         padding: 6px 0;
@@ -131,9 +139,9 @@ nav.navbar-fixed-top {
         padding-left: 5px;
         margin-top: 12px;
 
-        -moz-transition:color .1s ease-in;
-        -o-transition:color .1s ease-in;
-        -webkit-transition:color .1s ease-in;
+        -moz-transition:color .2s ease-in;
+        -o-transition:color .2s ease-in;
+        -webkit-transition:color .2s ease-in;
     }
 
     .last-social-btn {
@@ -160,9 +168,9 @@ nav.navbar-fixed-top {
     font-size: 21px;
     padding: 10px 0;
 
-    -moz-transition:color .1s ease-in;
-    -o-transition:color .1s ease-in;
-    -webkit-transition:color .1s ease-in;
+    -moz-transition:color .2s ease-in;
+    -o-transition:color .2s ease-in;
+    -webkit-transition:color .2s ease-in;
 }
 .mobile-nav.active {
     color: $gold;
@@ -192,9 +200,9 @@ nav.navbar-fixed-top {
         font-size: 16px;
         color: $cream;
 
-        -moz-transition:color .1s ease-in;
-        -o-transition:color .1s ease-in;
-        -webkit-transition:color .1s ease-in;
+        -moz-transition:color .2s ease-in;
+        -o-transition:color .2s ease-in;
+        -webkit-transition:color .2s ease-in;
     }
     a:hover {
         text-decoration: none;
