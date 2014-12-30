@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+<div class="col-sm-2 hidden-xs hidden-md hidden-lg"></div>
+
+<div class="col-md-offset-1 col-md-5 col-sm-10">
+    <!-- Only use every other video in this column, starting with the first video -->
+    {% assign use_video = true %}
+    {% for post in site.posts %}
+        {% if post.categories contains 'video' %}
+            {% if use_video %}
+                <div class="video-container">
+                    <div class="video">
+                        <iframe width="560" height="315" src="//{{ post.src }}?controls=2" frameborder="0" controls="2" allowfullscreen></iframe>
+                    </div>
+                    <p>{{ post.title }}</p>
+                    <p>{{ post.date | date: '%B %-d, %Y' }}</p>
+                </div>
+                {% assign use_video = false %}
+            {% else %}
+                {% assign use_video = true %}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+</div>
+
+<div class="col-sm-2 hidden-xs hidden-md hidden-lg"></div>
+
+<div class="col-md-5 col-sm-10">
+    <!-- Only use every other video in this column, starting with the second video -->
+    {% assign use_video = false %}
+    {% for post in site.posts %}
+        {% if post.categories contains 'video' %}
+            {% if use_video %}
+                <div class="video-container">
+                    <div class="video">
+                        <iframe width="560" height="315" src="//{{ post.src }}?controls=2" frameborder="0" controls="2" allowfullscreen></iframe>
+                    </div>
+                    <p>{{ post.title }}</p>
+                    <p>{{ post.date | date: '%B %-d, %Y' }}</p>
+                </div>
+                {% assign use_video = false %}
+            {% else %}
+                {% assign use_video = true %}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+</div>

@@ -64,6 +64,10 @@ body {
     background-position: fixed;
 }
 
+#content {
+    margin-top: 100px;
+}
+
 /*===================================================*/
 /* Header styles */
 /*===================================================*/
@@ -213,6 +217,50 @@ nav.navbar-fixed-top {
     }
 }
 
+/*===================================================*/
+/* Videos page styles */
+/*===================================================*/
+
+.video-container {
+    background-color: $transparent-black;
+    border: 1px solid $gold;
+    padding: 20px;
+    margin-bottom: 25px;
+
+    p {
+        text-align: center;
+        color: $cream;
+        font-size: 12px;
+    }
+    p:first-of-type {
+        font-weight: bold;
+        font-size: 20px;
+        margin-top: 10px;
+    }
+}
+
+.video {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+    box-shadow: 0 0 4px 3px $black;
+    -webkit-box-shadow: 0 0 8px 2px $black;
+
+    iframe, object, embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/*===================================================*/
+/* Responsive styles */
+/*===================================================*/
+
 /* Small devices */
 @media only screen and (max-width: $max-sm-width) {
     .header {
@@ -234,6 +282,10 @@ nav.navbar-fixed-top {
 
 /* Extra small devices */
 @media only screen and (max-width: $max-xs-width) {
+    #content {
+        margin-top: 70px;
+    }
+
     .header-logo {
         display: none;
     }
