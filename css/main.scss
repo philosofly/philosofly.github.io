@@ -206,16 +206,10 @@ nav.navbar-fixed-top {
 
     .header {
         a {
-            float: left;
-            padding-left: 0;
-            padding-right: 5px;
             margin-top: 9px;
         }
         a:first-of-type {
-            padding-left: 35px;
-        }
-        .last-social-btn {
-            padding-left: 0;
+            padding-right: 10px;
         }
     }
 }
