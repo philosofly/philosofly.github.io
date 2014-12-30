@@ -100,6 +100,9 @@ nav.navbar-fixed-top {
         -ms-interpolation-mode: bicubic;
         padding: 6px;
     }
+    img:hover {
+        padding-top: 10px;
+    }
 
     .logo-bottom {
         width: 0;
@@ -173,6 +176,39 @@ nav.navbar-fixed-top {
 .mobile-nav:hover {
     color: $gold;
     cursor: pointer;
+}
+
+.mobile-menu {
+    position: absolute;
+    right: 0;
+    top: 49px;
+
+    a {
+        float: right;
+        clear: both;
+        width: 100%;
+        text-align: center;
+        background-color: $transparent-black;
+        border-top: 1px solid $cream;
+        border-left: 1px solid $gold;
+        padding: 6px 30px;
+
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 16px;
+        color: $cream;
+
+        -moz-transition:color .1s ease-in;
+        -o-transition:color .1s ease-in;
+        -webkit-transition:color .1s ease-in;
+    }
+    a:hover {
+        text-decoration: none;
+        color: $gold;
+    }
+    a:last-of-type {
+        border-bottom: 1px solid $gold;
+    }
 }
 
 /* Small devices */
