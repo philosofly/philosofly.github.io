@@ -10,12 +10,12 @@ layout: default
     {% for post in site.posts %}
         {% if post.categories contains 'video' %}
             {% if use_video %}
-                <div class="video-container">
+                <div class="media-container">
                     <div class="video">
                         <iframe width="560" height="315" src="//{{ post.src }}?controls=2" frameborder="0" controls="2" allowfullscreen></iframe>
                     </div>
-                    <p>{{ post.title }}</p>
-                    <p>{{ post.date | date: '%B %-d, %Y' }}</p>
+                    <p class="large">{{ post.title }}</p>
+                    <p class="large">{{ post.date | date: '%B %-d, %Y' }}</p>
                 </div>
                 {% assign use_video = false %}
             {% else %}
@@ -33,12 +33,12 @@ layout: default
     {% for post in site.posts %}
         {% if post.categories contains 'video' %}
             {% if use_video %}
-                <div class="video-container">
+                <div class="media-container">
                     <div class="video">
                         <iframe width="560" height="315" src="//{{ post.src }}?controls=2" frameborder="0" controls="2" allowfullscreen></iframe>
                     </div>
-                    <p>{{ post.title }}</p>
-                    <p>{{ post.date | date: '%B %-d, %Y' }}</p>
+                    <p class="large">{{ post.title }}</p>
+                    <p class="large">{{ post.date | date: '%B %-d, %Y' }}</p>
                 </div>
                 {% assign use_video = false %}
             {% else %}
