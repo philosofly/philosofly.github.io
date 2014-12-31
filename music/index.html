@@ -2,23 +2,25 @@
 layout: default
 ---
 
-<div class="col-md-offset-1 col-md-10">
+<div class="col-sm-offset-1 col-sm-10 col-xs-12">
     <div class="container-fluid">
-        <div class="col-xs-12">
-            {% for post in site.posts %}
-                {% if post.categories contains 'music' %}
-                    <div class="media-container">
-                        {% if post.type == 'download' %}
-                            <p class="large"><a href="{{ post.src }}">{{ post.title }}</a></p>
-                            <a href="{{ post.src }}"><img style="max-height: 500px;" class="image" src="/img/{{ post.image }}" alt="Da Nu World Di$order" /></a>
-                        {% endif %}
-                        {% if post.type == 'soundcloud' %}
-                            <p class="large">{{ post.title }}</p>
-                            <iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//{{ post.src }}&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
-                        {% endif %}
-                    </div>
-                {% endif %}
-            {% endfor %}
+        <div class="row">
+            <div class="col-xs-12">
+                {% for post in site.posts %}
+                    {% if post.categories contains 'music' %}
+                        <div class="media-container">
+                            {% if post.type == 'download' %}
+                                <p class="large"><a href="{{ post.src }}">{{ post.title }}</a></p>
+                                <a href="{{ post.src }}"><img style="max-height: 500px;" class="image" src="/img/{{ post.image }}" alt="Da Nu World Di$order" /></a>
+                            {% endif %}
+                            {% if post.type == 'soundcloud' %}
+                                <p class="large">{{ post.title }}</p>
+                                <iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//{{ post.src }}&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+                            {% endif %}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
         </div>
     </div>
 </div>
