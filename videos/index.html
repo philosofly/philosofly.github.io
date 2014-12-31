@@ -12,7 +12,7 @@ layout: default
             {% if use_video %}
                 <div class="media-container">
                     <div class="video">
-                        <iframe width="560" height="315" src="//{{ post.src }}?controls=2" frameborder="0" controls="2" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="//{{ post.src }}?controls=2&autohide=1" frameborder="0" controls="2" allowfullscreen></iframe>
                     </div>
                     <p class="large">{{ post.title }}</p>
                     <p class="large">{{ post.date | date: '%B %-d, %Y' }}</p>
@@ -35,7 +35,7 @@ layout: default
             {% if use_video %}
                 <div class="media-container">
                     <div class="video">
-                        <iframe width="560" height="315" src="//{{ post.src }}?controls=2" frameborder="0" controls="2" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="//{{ post.src }}?controls=2&autohide=1" frameborder="0" controls="2" allowfullscreen></iframe>
                     </div>
                     <p class="large">{{ post.title }}</p>
                     <p class="large">{{ post.date | date: '%B %-d, %Y' }}</p>
