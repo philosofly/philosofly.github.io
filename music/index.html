@@ -18,8 +18,16 @@ layout: default
                                 <iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//{{ post.src }}&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
                             {% endif %}
                             {% if post.type == 'audiomack' %}
-                                <img style="max-height: 500px; margin-bottom: 20px;" class="image" src="/img/{{ post.image }}" alt="Da Nu World Di$order" />
-                                <iframe src='{{ post.src }}?' scrolling='no' width='100%' height='350' scrollbars='no' frameborder='0'></iframe>
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-5">
+                                            <img style="max-height: 500px; margin-bottom: 20px;" class="image" src="/img/{{ post.image }}" alt="Da Nu World Di$order" />
+                                        </div>
+                                        <div class="col-sm-12 col-md-7">
+                                            <iframe src='{{ post.src }}' scrolling='no' width='100%' height='350' scrollbars='no' frameborder='0'></iframe>
+                                        </div>
+                                    </div>
+                                </div>
                             {% endif %}
                         </div>
                     {% endif %}
